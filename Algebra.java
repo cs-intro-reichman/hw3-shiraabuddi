@@ -7,7 +7,7 @@ public class Algebra {
 	public static void main(String args[]) {
 	    // Tests some of the operations
 
-		System.out.println(div(15,7));   // 25 / 7
+		System.out.println(sqrt(169));   // 25 / 7
 	}  
 
 	// Returns x1 + x2
@@ -33,13 +33,25 @@ public class Algebra {
 	public static int minus(int x1, int x2) {
 		// Replace the following statement with your code
 		int num1 = x1;
-		if (x2<0){
-			for (int i = 0; i < x2; i--) {
+		if ((x2<0)&&(x1<0)){
+			for (int i = 0; i > x2; i--) {
 				num1++;
 			}	
 
 		}
-		if (x2>0){
+		else if ((x2>0)&&(x1<0)){
+			for (int i = 0; i < x2; i++) {
+				num1--;
+			}	
+
+		}
+		else if ((x2<0)&&(x1>0)){
+			for (int i = 0; i > x2; i--) {
+				num1++;
+			}	
+
+		}
+		else if ((x2>0)&&(x1>0)){
 			for (int i = 0; i < x2; i++) {
 				num1--;
 			}	
@@ -52,6 +64,9 @@ public class Algebra {
 	public static int times(int x1, int x2) {
 		// Replace the following statement with your code
 		int num1 = x1;
+		if (x2 == 0){
+			return  x2;
+		}
 		if (x2>0){
 			for (int i = 1; i < x2; i++) {
 				x1 = plus(x1, num1);
@@ -137,8 +152,11 @@ public class Algebra {
 		int afternum = 2;
 		int sqrt = x;
 
-		while (x>pow(beforenum, 2)){
-			if ((pow(beforenum, 2)<sqrt) && (pow(afternum, 2)>sqrt)){
+		while (x>=pow(beforenum, 2)){
+			if (pow(beforenum, 2)==sqrt){
+				return beforenum;
+			}
+			else if ((pow(beforenum, 2)<sqrt) && (pow(afternum, 2)>sqrt)){
 				return beforenum;
 			}
 			beforenum++;
