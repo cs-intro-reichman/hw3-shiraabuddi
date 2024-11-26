@@ -7,7 +7,7 @@ public class Algebra {
 	public static void main(String args[]) {
 	    // Tests some of the operations
 
-		System.out.println(sqrt(169));   // 25 / 7
+		System.out.println(minus(0, 7));   // 25 / 7
 	}  
 
 	// Returns x1 + x2
@@ -33,25 +33,25 @@ public class Algebra {
 	public static int minus(int x1, int x2) {
 		// Replace the following statement with your code
 		int num1 = x1;
-		if ((x2<0)&&(x1<0)){
+		if ((x2<0)&&(x1<=0)){
 			for (int i = 0; i > x2; i--) {
 				num1++;
 			}	
 
 		}
-		else if ((x2>0)&&(x1<0)){
+		else if ((x2>0)&&(x1<=0)){
 			for (int i = 0; i < x2; i++) {
 				num1--;
 			}	
 
 		}
-		else if ((x2<0)&&(x1>0)){
+		else if ((x2<0)&&(x1>=0)){
 			for (int i = 0; i > x2; i--) {
 				num1++;
 			}	
 
 		}
-		else if ((x2>0)&&(x1>0)){
+		else if ((x2>0)&&(x1>=0)){
 			for (int i = 0; i < x2; i++) {
 				num1--;
 			}	
