@@ -76,7 +76,7 @@ public class Algebra {
 			for (int i = -1; i > x2; i--) {
 				x1 = plus(x1, num1);
 			}
-			x1 = -x1;
+			x1 = minus(0, x1);
 		}
 		return x1;
 	}
